@@ -496,12 +496,12 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
+  var items = document.querySelectorAll('mover');
   var body_scroll = document.body.scrollTop / 1250;
 
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin(body_scroll + (i % 5));
-    items[i].style.left = "translateX(" + (100*phase) + "px)";
+    items[i].style.transform = "translateX(" + (100*phase) + "px)";
   }
 
   animating = false;
@@ -535,7 +535,6 @@ window.addEventListener('scroll', animationScroll);
 document.addEventListener('DOMContentLoaded', function () {
   var cols = 8;
   var s = 256;
-  var movingPizzas1 = document.getElementById("#movingPizzas1");
   for (var i = 0; i < 31; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
@@ -544,7 +543,8 @@ document.addEventListener('DOMContentLoaded', function () {
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    movingPizzas1.appendChild(elem);
+    document.querySelector("#movingPizzas1").appendChild(elem);
+
   }
   updatePositions();
 });
