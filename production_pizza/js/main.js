@@ -127,6 +127,7 @@ String.prototype.capitalize = function () {
 };
 
 function getAdj(x) {
+  'use strict';
   switch (x) {
   case "dark":
     var dark = ["dark", "morbid", "scary", "spooky", "gothic", "deviant", "creepy", "sadistic", "black", "dangerous", "dejected", "haunted",
@@ -190,6 +191,7 @@ function getAdj(x) {
 }
 
 function getNoun(y) {
+  'use strict';
   switch (y) {
   case "animals":
     var animals = ["flamingo", "hedgehog", "owl", "elephant", "pussycat", "alligator", "dachsund", "poodle", "beagle", "crocodile", "kangaroo",
@@ -262,6 +264,7 @@ var adjectives = ["dark", "color", "whimsical", "shiny", "noise", "apocalyptic",
 var nouns = ["animals", "everyday", "fantasy", "gross", "horror", "jewelry", "places", "scifi"];
 
 function generator(adj, noun) {
+  'use strict';
   var adjectives = getAdj(adj);
   var nouns = getNoun(noun);
   var randomAdjective = parseInt(Math.random() * adjectives.length);
@@ -271,41 +274,49 @@ function generator(adj, noun) {
 }
 
 function randomName() {
+  'use strict';
   var randomNumberAdj = parseInt(Math.random() * adjectives.length);
   var randomNumberNoun = parseInt(Math.random() * nouns.length);
   return generator(adjectives[randomNumberAdj], nouns[randomNumberNoun]);
 }
 
 var selectRandomMeat = function () {
+  'use strict';
   var randomMeat = pizzaIngredients.meats[Math.floor((Math.random() * pizzaIngredients.meats.length))];
   return randomMeat;
 };
 
 var selectRandomNonMeat = function () {
+  'use strict';
   var randomNonMeat = pizzaIngredients.nonMeats[Math.floor((Math.random() * pizzaIngredients.nonMeats.length))];
   return randomNonMeat;
 };
 
 var selectRandomCheese = function () {
+  'use strict';
   var randomCheese = pizzaIngredients.cheeses[Math.floor((Math.random() * pizzaIngredients.cheeses.length))];
   return randomCheese;
 };
 
 var selectRandomSauce = function () {
+  'use strict';
   var randomSauce = pizzaIngredients.sauces[Math.floor((Math.random() * pizzaIngredients.sauces.length))];
   return randomSauce;
 };
 
 var selectRandomCrust = function () {
+  'use strict';
   var randomCrust = pizzaIngredients.crusts[Math.floor((Math.random() * pizzaIngredients.crusts.length))];
   return randomCrust;
 };
 
 var ingredientItemizer = function (string) {
+  'use strict';
   return "<li>" + string + "</li>";
 };
 
 var makeRandomPizza = function () {
+  'use strict';
   var pizza = "";
 
   var numberOfMeats = Math.floor((Math.random() * 4));
@@ -331,6 +342,7 @@ var makeRandomPizza = function () {
 };
 
 var pizzaElementGenerator = function (i) {
+  'use strict';
   var pizzaContainer,
     pizzaImageContainer,
     pizzaImage,
@@ -370,17 +382,18 @@ var pizzaElementGenerator = function (i) {
 
 
 var resizePizzas = function (size) {
+  'use strict';
   window.performance.mark("mark_start_resize");
   function changeSliderLabel(size) {
     switch (size) {
     case "1":
-      document.querySelector("#pizzaSize").innerHTML = "Small";
+      document.getElementById("pizzaSize").innerHTML = "Small";
       return;
     case "2":
-      document.querySelector("#pizzaSize").innerHTML = "Medium";
+      document.getElementById("pizzaSize").innerHTML = "Medium";
       return;
     case "3":
-      document.querySelector("#pizzaSize").innerHTML = "Large";
+      document.getElementById("pizzaSize").innerHTML = "Large";
       return;
     default:
       console.log("bug in changeSliderLabel");
@@ -390,6 +403,7 @@ var resizePizzas = function (size) {
 
 
   function changePizzaSizes(size) {
+    'use strict';
     var newwidth;
     switch (size) {
     case "1":
@@ -404,8 +418,10 @@ var resizePizzas = function (size) {
     default:
       console.log("bug in sizeSwitcher");
     }
-    var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
-    for (var i = 0; i < randomPizzas.length; i++) {
+    var randomPizzas = document.getElementsByClassName("randomPizzaContainer");
+    var i = 0;
+    var len = randomPizzas.length;
+    for (i = 0; i < len; i++) {
       randomPizzas[i].style.width = newwidth + "%";
     }
   }
@@ -419,7 +435,8 @@ var resizePizzas = function (size) {
 window.performance.mark("mark_start_generating");
 
 var pizzasDiv = document.getElementById("randomPizzas");
-for (var i = 2; i < 100; i++) {
+var i = 0;
+for (i = 2; i < 100; i++) {
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -430,9 +447,11 @@ console.log("Time to generate pizzas on load: " + timeToGenerate[0].duration + "
 var frame = 0;
 
 function logAverageFrame(times) {
+  'use strict';
   var numberOfEntries = times.length;
   var sum = 0;
-  for (var i = numberOfEntries - 1; i > numberOfEntries - 11; i--) {
+  var i = 0;
+  for (i = numberOfEntries - 1; i > numberOfEntries - 11; i--) {
     sum = sum + times[i].duration;
   }
   console.log("Average time to generate last 10 frames: " + sum / 10 + "ms");
@@ -440,14 +459,19 @@ function logAverageFrame(times) {
 var animating = false;
 
   function updatePositions() {
+    'use strict';
     frame++;
     window.performance.mark("mark_start_frame");
     var items = document.getElementsByClassName('mover');
     var body_scroll = document.body.scrollTop / 1250;
-    var w = 0.33*window.innerWidth;
-    for (var i = 0; i < items.length; i++) {
-      var phase = Math.sin(body_scroll + (i % 5));
-      items[i].style.transform = "translate3d(" + (w * phase) + "px, 0, 0)";
+   // var w = 0.33*window.innerWidth;
+    var i = 0;
+    var leng = items.length;
+    var phase;
+      for (i = 0; i < leng; i++) {
+        phase = Math.sin(body_scroll + (i % 5));
+
+      items[i].style.transform = "translate3d(" + 100 * phase + "px, 0, 0)";
     }
     animating = false;
 
@@ -462,6 +486,7 @@ var animating = false;
 window.addEventListener('scroll', animationScroll);
 
 function animationScroll() {
+  'use strict';
   if (!animating) {
     window.requestAnimationFrame(updatePositions);
     animating = true;
@@ -469,19 +494,25 @@ function animationScroll() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+   'use strict';
   var cols = 8;
   var s = 256;
-  var movingPizzas = document.querySelector("#movingPizzas1");
-  for (var i = 0; i < 31; i++) {
-    var elem = document.createElement('img');
+  var movingPizzas = document.getElementById("movingPizzas1");
+  var iHeight = Math.round(window.screen.height / s);
+  var r = iHeight * cols;
+  var elem;
+
+  for (var i = 0; i < r; i++) {
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "img/pizza.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
-    elem.basicLeft = (i % cols) * s;
+    elem.left = (i % cols) * s + "px";
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     movingPizzas.appendChild(elem);
 
   }
   updatePositions();
 });
+
