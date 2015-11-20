@@ -25,6 +25,16 @@ Frame Rate Optimization
 - Changed access to DOM elements
 - Minimized CSS and JS files
 - Used gulp to automatically minimize the files and images
+- Added 'use strict' to function definitions, based on suggestions in the code review
+- Changed document.querySelector, document.querySelectorAll to document.getElementByID and document.getElementByClassName respectively, based on suggestions in the code review
+- Optimized 'for loops' by declaring the index and array length outside the for loop declaration, as per code review suggestions. Specifically in the updatePositions(), 'variable phase' was declared outside of the loop, to avoid being created every time the loop runs. Also, as suggested, a better approach to dynamically calculate the number of pizzas needed to fill the screen was changed, based on browser window resolution: 'window.screen.height'.
+References
+https://developer.mozilla.org/en-US/docs/Web/API/Screen/height
+http://www.w3schools.com/jsref/prop_screen_height.asp
+https://developer.mozilla.org/en-US/docs/Web/API/Screen/width
+http://tripleodeon.com/2011/12/first-understand-your-screen/
+http://ryanve.com/lab/dimensions/ 
+
 
 ![pizza_js1](https://cloud.githubusercontent.com/assets/10465533/11296401/34017e72-8f72-11e5-8cef-24e6fb34b44f.png)
 
