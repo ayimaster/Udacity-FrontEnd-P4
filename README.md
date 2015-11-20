@@ -22,14 +22,6 @@ Steps to launch Portfolio Site:
 
 Part 1
 Page Load Speed Optimization
-Steps to launch Pizza Recipe site: 
-
-1. Clone this repository to your local machine
-
-2. Click to open pizza.html in production_pizza/js folder of this repo
-
-3. To find more information, such as comments and instructions please see original_pizza/main.js 
-
 - Minimized CSS, JS files (Used gulp to automatically minimize the files and images)
 - Compressed and resized images
 - Inline critical CSS
@@ -45,6 +37,13 @@ Steps to launch Pizza Recipe site:
 
 Part 2
 Frame Rate Optimization
+Steps to launch Pizza Recipe site: 
+
+1. Clone this repository to your local machine
+
+2. Click to open pizza.html in production_pizza/js folder of this repo
+
+3. To find more information, such as comments and instructions please see original_pizza/main.js
 
 Optimization of pizza.html/ main.js files
 - Analyzed critical rendering path of pizza.html
