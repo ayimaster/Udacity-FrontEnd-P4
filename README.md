@@ -1,7 +1,7 @@
 # Udacity-FrontEnd-P4
 Part 1
 Page Load Speed Optimization
-- Minimized CSS, JS files
+- Minimized CSS, JS files (Used gulp to automatically minimize the files and images)
 - Compressed and resized images
 - Inline critical CSS
 - Media attribute added to CSS links
@@ -24,6 +24,7 @@ Frame Rate Optimization
 - Optimized images
 - Changed access to DOM elements
 - Minimized CSS and JS files
+- Used gulp to automatically minimize the files and images
 
 ![pizza_js1](https://cloud.githubusercontent.com/assets/10465533/11296401/34017e72-8f72-11e5-8cef-24e6fb34b44f.png)
 
