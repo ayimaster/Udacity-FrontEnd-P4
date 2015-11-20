@@ -8,9 +8,9 @@ Page Load Speed Optimization
 - Added asynch attribute to certain JS scripts
 - Ran the URL through PageSpeed Insights
 
-![portf1](https://cloud.githubusercontent.com/assets/10465533/11296176/e1f47586-8f70-11e5-81f6-1e69971325df.png)
+![portf1](https://cloud.githubusercontent.com/assets/10465533/11296403/369fddcc-8f72-11e5-991e-75cae00481b9.png)
 
-![portf2](https://cloud.githubusercontent.com/assets/10465533/11296177/e375b992-8f70-11e5-9dc3-3e2221dc2fd6.png)
+![portf2](https://cloud.githubusercontent.com/assets/10465533/11296405/37df6d1a-8f72-11e5-91f5-6c35b4abeb3c.png)
 
 
 
@@ -25,8 +25,8 @@ Frame Rate Optimization
 - Changed access to DOM elements
 - Minimized CSS and JS files
 
-![pizza_js1](https://cloud.githubusercontent.com/assets/10465533/11296178/e5403784-8f70-11e5-92b7-ca2c8c254abc.png)
+![pizza_js1](https://cloud.githubusercontent.com/assets/10465533/11296401/34017e72-8f72-11e5-8cef-24e6fb34b44f.png)
 
-![pizza_js2](https://cloud.githubusercontent.com/assets/10465533/11296179/e680279e-8f70-11e5-820d-5ab743cf997f.png)
+![pizza_js2](https://cloud.githubusercontent.com/assets/10465533/11296402/3519fb72-8f72-11e5-8bdd-bf9c403a5fd2.png)
 
 
