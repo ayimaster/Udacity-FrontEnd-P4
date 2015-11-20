@@ -8,17 +8,26 @@ The source code for the pizza recipe site in this repository is in original_pizz
 
 Steps to launch Portfolio Site: 
 1. Clone the repository to your local machine
+
 2. Launch local http server to test using command line: python -m SimpleHTTPServer 8080
+
 3. In a browser open localhost:8080
+ 
 4. In the same directory of this repo in your local machine install and run ./ngrok http 8080 to access a secure public URL to the site.
+ 
 5. Copy the public URL given by ngrok in the terminal and paste in PageSpeed Insights to view the score of the page
+
 6. If necessary, follow PageSeed Insights suggestions to improve the site
+
 
 Part 1
 Page Load Speed Optimization
 Steps to launch Pizza Recipe site: 
+
 1. Clone this repository to your local machine
+
 2. Click to open pizza.html in production_pizza/js folder of this repo
+
 3. To find more information, such as comments and instructions please see original_pizza/main.js 
 
 - Minimized CSS, JS files (Used gulp to automatically minimize the files and images)
