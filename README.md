@@ -1,12 +1,12 @@
 # Udacity-FrontEnd-P4
-Summary
+## Summary
 
 This project was completed as part of Udacity Front-End Web Developer Nanodegree. The project involves improving the performance of loading and rendering of an existing portfolio site and a pizza recipe site. 
 
 The source code for the portfolio site in this repository is in original_portfolio/ and production code in production_portfolio/
 The source code for the pizza recipe site in this repository is in original_pizza/ and the production code in production_pizza/
 
-Steps to launch Portfolio Site: 
+## Steps to launch Portfolio Site: 
 1. Clone the repository to your local machine
 
 2. Launch local http server to test using command line: python -m SimpleHTTPServer 8080
@@ -20,8 +20,8 @@ Steps to launch Portfolio Site:
 6. If necessary, follow PageSeed Insights suggestions to improve the site
 
 
-Part 1
-Page Load Speed Optimization
+##Part 1
+###Page Load Speed Optimization
 - Minimized CSS, JS files (Used gulp to automatically minimize the files and images)
 - Compressed and resized images
 - Inline critical CSS
@@ -35,8 +35,8 @@ Page Load Speed Optimization
 
 
 
-Part 2
-Frame Rate Optimization
+## Part 2
+###Frame Rate Optimization
 Steps to launch Pizza Recipe site: 
 
 1. Clone this repository to your local machine
