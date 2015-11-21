@@ -3,8 +3,8 @@
 
 This project was completed as part of Udacity Front-End Web Developer Nanodegree. The project involves improving the performance of loading and rendering of an existing portfolio site and a pizza recipe site. 
 
-The source code for the portfolio site in this repository is in original_portfolio/ and production code in production_portfolio/
-The source code for the pizza recipe site in this repository is in original_pizza/ and the production code in production_pizza/
+The source code for the portfolio site in this repository is in *original_portfolio/ and production code in *production_portfolio/
+The source code for the pizza recipe site in this repository is in *original_pizza/ and the production code in *production_pizza/
 
 ## Steps to launch Portfolio Site: 
 1. Clone the repository to your local machine
