@@ -9,11 +9,11 @@ The source code for the pizza recipe site in this repository is in original_pizz
 ## Steps to launch Portfolio Site: 
 1. Clone the repository to your local machine
 
-2. Launch local http server to test using command line: python -m SimpleHTTPServer 8080
+2. Launch local http server to test using command line: ```python -m SimpleHTTPServer 8080```
 
 3. In a browser open localhost:8080
  
-4. In the same directory of this repo in your local machine install and run ./ngrok http 8080 to access a secure public URL to the site.
+4. In the same directory of this repo in your local machine install and run ```./ngrok http 8080``` to access a secure public URL to the site.
  
 5. Copy the public URL given by ngrok in the terminal and paste in PageSpeed Insights to view the score of the page
 
@@ -55,8 +55,8 @@ Optimization of pizza.html/ main.js files
 - Minimized CSS and JS files
 - Used gulp to automatically minimize the files and images
 - Added 'use strict' to function definitions, based on suggestions in the code review
-- Changed document.querySelector, document.querySelectorAll to document.getElementByID and document.getElementByClassName respectively, based on suggestions in the code review
-- Optimized 'for loops' by declaring the index and array length outside the for loop declaration, as per code review suggestions. Specifically in the updatePositions(), 'variable phase' was declared outside of the loop, to avoid being created every time the loop runs. Also, as suggested, a better approach to dynamically calculate the number of pizzas needed to fill the screen was changed, based on browser window resolution: 'window.screen.height'.
+- Changed ```document.querySelector, document.querySelectorAll``` to ```document.getElementByID and document.getElementByClassName``` respectively, based on suggestions in the code review
+- Optimized 'for loops' by declaring the index and array length outside the for loop declaration, as per code review suggestions. Specifically in the updatePositions(), 'variable phase' was declared outside of the loop, to avoid being created every time the loop runs. Also, as suggested, a better approach to dynamically calculate the number of pizzas needed to fill the screen was changed, based on browser window resolution: ```'window.screen.height'```.
 References
 https://developer.mozilla.org/en-US/docs/Web/API/Screen/height
 http://www.w3schools.com/jsref/prop_screen_height.asp
