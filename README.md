@@ -26,8 +26,8 @@ In the terminal run `./ngrok http 8080`
 
 6. If necessary, follow PageSeed Insights suggestions to improve the site
 
-##### An alternative option is to visit my Github page and follow optimization techniques below:
-
+##### Option 2
+Visit my Github page and follow optimization techniques below:
 ```
 https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_portfolio
 ```
@@ -54,13 +54,13 @@ https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_portfoli
 2. Open pizza.html in Chrome or in any other browser and main.js in any text editor. 
    To see the site's rendering and performance open Chrome Developer Tools. 
 
-######To see the optimization made by me (production code):
+#####To see the optimization made by me (production code):
 1. Clone this repository to your local machine
 ```git clone https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_pizza```
 
 2. Open pizza.html an a browser and main.js in a text editor.
 
-#### Alternatively visit my [Github page!](https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_pizza) to see commits made and follow optimization techniques below. 
+##### Alternatively visit my [Github page](https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_pizza) to see commits made and follow optimization techniques below. 
 - Analyzed critical rendering path of pizza.html
 - Optimized loops in js/main.js
 - Optimized scroll events
