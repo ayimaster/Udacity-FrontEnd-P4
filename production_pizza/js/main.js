@@ -508,11 +508,10 @@ document.addEventListener('DOMContentLoaded', function () {
     elem.src = "img/pizza.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
-    elem.left = (i % cols) * s + "px";
+    elem.style.left = (i % cols) * s + "px";
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     movingPizzas.appendChild(elem);
 
   }
   updatePositions();
 });
-
