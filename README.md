@@ -1,7 +1,7 @@
 # Udacity-FrontEnd-P4
 ## Summary
 
-This project was completed as part of Udacity Front-End Web Developer Nanodegree. The project involves improving the performance of loading and rendering of an existing portfolio site and a pizza recipe site. 
+This project was completed as part of Udacity Front-End Web Developer Nanodegree. The project involves improving the performance of loading of an existing portfolio site and rendering of a pizza recipe site. 
 
 The source code for the portfolio site in this repository is in *original_portfolio/* and production code in *production_portfolio/*
 The source code for the pizza recipe site in this repository is in *original_pizza/* and the production code in *production_pizza/*
@@ -9,23 +9,28 @@ The source code for the pizza recipe site in this repository is in *original_piz
 ##Part 1
 ###Page Load Speed Optimization
 #### Steps to launch Portfolio Site
-#####First
-1. Clone the repository to your local machine
-```git clone https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_portfolio```
+##### Option 1
+1. Using command line clone the repository to your local machine
+   ```
+   git clone https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_portfolio
+   ```
 
-2. Launch local http server to test using command line. In your terminal write
-```python -m SimpleHTTPServer 8080```
+2. Launch local http server to test. In your terminal write `python -m SimpleHTTPServer 8080`
 
-3. Once the server is running open a browser and type in 
-```localhost:8080```
+3. Once the server is running open a browser and type in url  `localhost:8080`
  
-4. In the same directory of this repo on your local machine install and run ```./ngrok http 8080``` to access a secure public URL to the site. To install ngrok, please see this website: https://ngrok.com/
+4. In the same directory of this repo on your local machine install ngrok to access a secure public URL to the site. To install ngrok, visit: https://ngrok.com/
+In the terminal run `./ngrok http 8080`
  
-5. In the terminal, where ngrok is running, copy the public URL given by ngrok and paste in [PageSpeed Insights API!](https://developers.google.com/speed/pagespeed/insights/) to view the score of the page. The higher the score the less room for improvement is required. 
+5. Copy the public URL given by ngrok and paste in [PageSpeed Insights API!](https://developers.google.com/speed/pagespeed/insights/) to view the score of the page. The higher the score the less room for improvement is required. 
 
 6. If necessary, follow PageSeed Insights suggestions to improve the site
 
-##### An alternative option is to visit my Github page, as well as optimization techniques below: ```https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_portfolio```. 
+##### An alternative option is to visit my Github page and follow optimization techniques below:
+
+```
+https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_portfolio
+```
 
 - Minimized CSS, JS files (Used gulp to automatically minimize the files and images)
 - Compressed and resized images
@@ -46,8 +51,8 @@ The source code for the pizza recipe site in this repository is in *original_piz
 1. Clone this repository to your local machine: 
 ```git clone https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/original_pizza```
 
-2. Open pizza.html and main.js in Chrome or in any other browser. 
-   To see its performance open Chrome Developer Tools. 
+2. Open pizza.html in Chrome or in any other browser and main.js in any text editor. 
+   To see the site's rendering and performance open Chrome Developer Tools. 
 
 ######To see the optimization made by me (production code):
 1. Clone this repository to your local machine
@@ -55,7 +60,7 @@ The source code for the pizza recipe site in this repository is in *original_piz
 
 2. Open pizza.html an a browser and main.js in a text editor.
 
-#### Alternatively visit my [Github page!](https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_pizza) to see commits made, as well as a summary of optimization techniques below. 
+#### Alternatively visit my [Github page!](https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_pizza) to see commits made and follow optimization techniques below. 
 - Analyzed critical rendering path of pizza.html
 - Optimized loops in js/main.js
 - Optimized scroll events
@@ -66,7 +71,7 @@ The source code for the pizza recipe site in this repository is in *original_piz
 - Used gulp to automatically minimize the files and images
 - Added 'use strict' to function definitions, based on suggestions in the code review
 - Changed ```document.querySelector, document.querySelectorAll``` to ```document.getElementByID and document.getElementByClassName``` respectively, based on suggestions in the code review
-- Optimized 'for loops' by declaring the index and array length outside the for loop declaration, as per code review suggestions. Specifically in the updatePositions(), 'variable phase' was declared outside of the loop, to avoid being created every time the loop runs. Also, as suggested, a better approach to dynamically calculate the number of pizzas needed to fill the screen was changed, based on browser window resolution: ```'window.screen.height'```.
+- Optimized 'for loops' by declaring the index and array length outside the for loop declaration, as per code review suggestions. Specifically in the updatePositions(), 'variable phase' was declared outside of the loop, to avoid being created every time the loop runs. Also, as suggested, a better approach to dynamically calculate the number of pizzas needed to fill the screen was changed, based on browser window resolution: ```window.screen.height```.
 References
 https://developer.mozilla.org/en-US/docs/Web/API/Screen/height
 http://www.w3schools.com/jsref/prop_screen_height.asp
