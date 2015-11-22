@@ -6,22 +6,27 @@ This project was completed as part of Udacity Front-End Web Developer Nanodegree
 The source code for the portfolio site in this repository is in *original_portfolio/* and production code in *production_portfolio/*
 The source code for the pizza recipe site in this repository is in *original_pizza/* and the production code in *production_pizza/*
 
-## Steps to launch Portfolio Site: 
+##Part 1
+###Page Load Speed Optimization
+#### Steps to launch Portfolio Site
+#####First
 1. Clone the repository to your local machine
+```git clone https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_portfolio```
 
-2. Launch local http server to test using command line: ```python -m SimpleHTTPServer 8080```
+2. Launch local http server to test using command line. In your terminal write
+```python -m SimpleHTTPServer 8080```
 
-3. In a browser open localhost:8080
+3. Once the server is running open a browser and type in 
+```localhost:8080```
  
-4. In the same directory of this repo in your local machine install and run ```./ngrok http 8080``` to access a secure public URL to the site.
+4. In the same directory of this repo on your local machine install and run ```./ngrok http 8080``` to access a secure public URL to the site. To install ngrok, please see this website: https://ngrok.com/
  
-5. Copy the public URL given by ngrok in the terminal and paste in PageSpeed Insights to view the score of the page
+5. In the terminal, where ngrok is running, copy the public URL given by ngrok and paste in [PageSpeed Insights API!](https://developers.google.com/speed/pagespeed/insights/) to view the score of the page. The higher the score the less room for improvement is required. 
 
 6. If necessary, follow PageSeed Insights suggestions to improve the site
 
+##### An alternative option is to visit my Github page, as well as optimization techniques below: ```https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_portfolio```. 
 
-##Part 1
-###Page Load Speed Optimization
 - Minimized CSS, JS files (Used gulp to automatically minimize the files and images)
 - Compressed and resized images
 - Inline critical CSS
@@ -34,18 +39,23 @@ The source code for the pizza recipe site in this repository is in *original_piz
 ![portf2](https://cloud.githubusercontent.com/assets/10465533/11296405/37df6d1a-8f72-11e5-91f5-6c35b4abeb3c.png)
 
 
-
 ## Part 2
 ###Frame Rate Optimization
-Steps to launch Pizza Recipe site: 
+#### Steps to launch Pizza Recipe Site
+#####To see the source (original) code:
+1. Clone this repository to your local machine: 
+```git clone https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/original_pizza```
 
+2. Open pizza.html and main.js in Chrome or in any other browser. 
+   To see its performance open Chrome Developer Tools. 
+
+######To see the optimization made by me (production code):
 1. Clone this repository to your local machine
+```git clone https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_pizza```
 
-2. Click to open pizza.html in *production_pizza/js* folder of this repo
+2. Open pizza.html an a browser and main.js in a text editor.
 
-3. To find more information, such as comments and instructions please see *original_pizza/main.js*
-
-Optimization of pizza.html/ main.js files
+#### Alternatively visit my [Github page!](https://github.com/ayimaster/Udacity-FrontEnd-P4/tree/master/production_pizza) to see commits made, as well as a summary of optimization techniques below. 
 - Analyzed critical rendering path of pizza.html
 - Optimized loops in js/main.js
 - Optimized scroll events
